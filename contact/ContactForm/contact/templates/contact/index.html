@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+    <body>
+        <style>
+            h1 {
+                font-size: 3rem;
+            }
+            form, h1 {
+                text-align: center;
+            }
+            input {
+                border: 1px solid lightgrey;
+                padding: 5px 50px;
+                margin-bottom: 10px;
+                
+            }
+            textarea {
+                border: 1px solid lightgrey;
+                width: 280px;
+                height: 15vh;
+            }
+            .button {
+                padding: 10px;
+                border: 1px solid blue;
+                color: white;
+                border-radius: 5px;
+                background-color: blue;
+                width: 24%;
+            }
+        </style>
+        <h1>Contact</h1>
+
+        <form action="." method="post" class="">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <button class="button">Send Message</button>
+        </form>
+    </body>
+</html>
